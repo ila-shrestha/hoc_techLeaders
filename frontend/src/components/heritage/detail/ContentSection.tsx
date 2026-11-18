@@ -1,10 +1,19 @@
+import Image from "next/image";
 import type { HeritageSection } from "@/data/types";
+import type { DetailPhoto } from "@/data/detailPhotos";
 
 /**
  * Renders one documented section. The parent passes already-localized
  * content (English or Nepali) so this component stays language-agnostic.
+ * An optional contextual photograph is shown beside the section content.
  */
-export function ContentSection({ section }: { section: HeritageSection }) {
+export function ContentSection({
+  section,
+  photo,
+}: {
+  section: HeritageSection;
+  photo?: DetailPhoto;
+}) {
   return (
     <section id={section.id} className="scroll-mt-24 border-b border-line/70 py-10 last:border-b-0 md:py-14">
       <div className="max-w-3xl">
@@ -16,6 +25,22 @@ export function ContentSection({ section }: { section: HeritageSection }) {
         <h2 className="mt-2 font-display text-2xl font-semibold text-ink md:text-3xl">
           {section.title}
         </h2>
+        {photo && (
+          <figure className="mt-5 md:float-right md:ml-8 md:w-80">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-line">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 320px"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs leading-relaxed text-ink-soft">
+              {photo.caption}
+            </figcaption>
+          </figure>
+        )}
         <div className="mt-5 space-y-4">
           {section.blocks.map((block, i) => (
             <div key={i}>

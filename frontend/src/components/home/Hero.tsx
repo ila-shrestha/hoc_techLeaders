@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { siddhiGanesh } from "@/data/siddhiGanesh";
 import { useLanguage } from "@/i18n/language";
 
@@ -64,9 +66,28 @@ export function Hero() {
       onMouseLeave={() => setMouse({ x: 0, y: 0 })}
       className="surface-maroon pattern-dhaka relative flex min-h-[100svh] items-center overflow-hidden"
     >
+      {/* Background photograph with readability overlays */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/images/hero/heropage.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-maroon-deep/75 via-maroon-deep/60 to-maroon-deep/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-maroon-deep/60 via-transparent to-transparent" />
+        <div className="pattern-dhaka absolute inset-0 opacity-60" />
+      </div>
+
       {/* Ambient glows */}
       <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-darkred/30 blur-[120px]" />
       <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-bright/15 blur-[100px]" />
+
+      {/* Decorative Newari window motifs at the side margins (wide screens only) */}
+      <NewariWindow className="pointer-events-none absolute left-8 top-1/4 hidden h-56 w-40 opacity-30 2xl:block" />
+      <NewariWindow className="pointer-events-none absolute bottom-1/4 right-8 hidden h-56 w-40 opacity-30 2xl:block" />
 
       <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-4 pb-24 pt-32 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Copy */}
@@ -123,6 +144,7 @@ export function Hero() {
                   <div style={{ transform: `translateZ(40px) scale(1.08)` }} className="h-full w-full">
                     <PlaceholderImage site={siddhiGanesh} priority />
                   </div>
+                  <HeroCarousel />
                 </div>
               </NewariWindow>
             </div>

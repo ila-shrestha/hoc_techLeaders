@@ -12,6 +12,7 @@ export const heritageSites: HeritageSite[] = [
     summary:
       "A beloved neighbourhood temple regarded by the community as the area's original and significant Ganesh idol.",
     summaryNe: "क्षेत्रको मूल र महत्त्वपूर्ण गणेश प्रतिमा मानिने मनपर्ने छिमेकी मन्दिर।",
+    image: "/images/hero/siddhiGaneshoutside.JPG",
     imageAlt: "Siddhi Ganesh Temple, Ward 16",
     status: "documented",
     featured: true,
@@ -23,6 +24,7 @@ export const heritageSites: HeritageSite[] = [
     summary:
       "A traditional Newar heritage site whose vessel-like form recalls the Gagro once used in religious offerings.",
     summaryNe: "परम्परागत नेवार सम्पदा स्थान",
+    image: "/images/hero/konchadyo.jpeg",
     imageAlt: "Koncha Dyo, Ward 16",
     status: "documented",
     featured: true,
