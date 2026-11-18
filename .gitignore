@@ -6,3 +6,4 @@ backend/dist/
 .env.*
 !.env.example
 .DS_Store
+frontend/next-env.d.ts

@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ward 16 Heritage — immersive maroon-led palette */
+  --color-maroon: #830000;
+  --color-maroon-deep: #5c0000;
+  --color-maroon-dark: #3d0000;
+  --color-darkred: #bc0202;
+  --color-bright: #ff0000;
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+
+  /* Supporting neutrals — used sparingly for readability */
+  --color-ink-soft: #2b2320;
+  --color-mute: #6f6660;
+  --color-line: #e8ded2;
+  --color-mist: #f6f1ea;
+
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-mist);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-bright);
+  color: var(--color-paper);
+}
+
+/* ---------- Design system utilities ---------- */
+
+/* Layered maroon surface with subtle depth */
+.surface-maroon {
+  background:
+    radial-gradient(120% 90% at 15% 0%, rgba(255, 255, 255, 0.07), transparent 55%),
+    linear-gradient(160deg, var(--color-maroon) 0%, var(--color-maroon-deep) 60%, var(--color-maroon-dark) 100%);
+}
+
+/* Newari-inspired geometric lattice (dhaka) pattern */
+.pattern-dhaka {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07'%3E%3Cpath d='M24 4 L44 24 L24 44 L4 24 Z'/%3E%3Ccircle cx='24' cy='24' r='7'/%3E%3Cpath d='M24 13 L35 24 L24 35 L13 24 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-dhaka-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23830000' stroke-opacity='0.08'%3E%3Cpath d='M24 4 L44 24 L24 44 L4 24 Z'/%3E%3Ccircle cx='24' cy='24' r='7'/%3E%3Cpath d='M24 13 L35 24 L24 35 L13 24 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Ornamental divider — stepped Newari motif */
+.divider-motif {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-darkred);
+}
+.divider-motif::before,
+.divider-motif::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--color-darkred), transparent);
+}
+
+/* 3D card helpers */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-1200 {
+  perspective: 1200px;
+}
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  will-change: transform;
+}
+.card-3d:hover {
+  box-shadow: 0 30px 60px -18px rgba(61, 0, 0, 0.55);
+}
+.card-3d-inner {
+  transform: translateZ(30px);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating decorative element */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50% { transform: translateY(-14px) rotate(var(--rot, 0deg)); }
+}
+.floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+/* Slow ambient drift for hero layers */
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -18px, 0); }
+}
+.drift {
+  animation: drift 9s ease-in-out infinite alternate;
+}
+
+/* Pulse for chatbot button */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+.pulse-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--color-bright);
+  animation: pulse-ring 2.2s ease-out infinite;
+}
+
+/* Newari window frame — layered border motif */
+.window-frame {
+  position: relative;
+  border: 10px solid var(--color-maroon-dark);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.15),
+    0 24px 60px -20px rgba(0, 0, 0, 0.6);
+}
+.window-frame::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+/* Focus visibility for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-bright);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floaty,
+  .drift,
+  .pulse-ring::before {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-3d {
+    transition: none;
+  }
+}
