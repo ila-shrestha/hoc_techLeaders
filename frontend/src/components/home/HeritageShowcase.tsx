@@ -25,8 +25,21 @@ export function HeritageShowcase() {
           </Link>
         </div>
 
-        <div className="mt-12">
+        <div className="relative mt-12">
+          {/* Decorative dhaka strips flanking the carousel (desktop) */}
+          <div className="pattern-dhaka-dark pointer-events-none absolute -left-5 top-0 hidden h-full w-2.5 rounded-full opacity-70 lg:block" />
+          <div className="pattern-dhaka-dark pointer-events-none absolute -right-5 top-0 hidden h-full w-2.5 rounded-full opacity-70 lg:block" />
+
           <HeritageCarousel />
+
+          {/* Ornamental divider below the carousel */}
+          <div className="mt-8 flex items-center justify-center gap-3 text-darkred/50" aria-hidden="true">
+            <span className="h-px w-16 bg-darkred/30 sm:w-24" />
+            <svg width="14" height="14" viewBox="0 0 14 14" className="rotate-45">
+              <rect x="2" y="2" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+            <span className="h-px w-16 bg-darkred/30 sm:w-24" />
+          </div>
         </div>
       </div>
     </section>

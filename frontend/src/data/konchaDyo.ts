@@ -96,7 +96,7 @@ export const konchaDyo: HeritageDetail = {
     },
   ],
   gallery: [
-    { alt: "Koncha Dyo structure", caption: "The vessel-like form of Koncha Dyo" },
+    { src: "/images/hero/konchadyo.jpeg", alt: "Koncha Dyo structure", caption: "The vessel-like form of Koncha Dyo" },
     { alt: "Traditional Gagro vessel used in Newar practice", caption: "A traditional Gagro vessel" },
     { alt: "Devotees at Koncha Dyo", caption: "Community visits and worship" },
     { alt: "Koncha Dyo within the Ward 16 streetscape", caption: "Koncha Dyo in its neighbourhood setting" },

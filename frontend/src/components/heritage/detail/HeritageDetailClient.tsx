@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/i18n/language";
+import { detailPhotos, type DetailPhoto } from "@/data/detailPhotos";
 import { DetailHero } from "./DetailHero";
 import { ContentSection } from "./ContentSection";
 import { Gallery } from "./Gallery";
@@ -55,12 +57,33 @@ export function HeritageDetailClient({
   const content = useNe ? detail.ne! : detail;
   const introduction = content.introduction;
   const sections = content.sections;
-  const gallery = content.gallery;
   const videos = content.videos;
   const location: LocationInfo = content.location;
   const references =
     useNe && detail.ne?.references ? detail.ne.references : detail.references;
   const reviewPending = useNe && detail.ne?.reviewPending;
+
+  // Contextual photographs (English with Nepali caption fallback)
+  const photos = detailPhotos[detail.slug];
+  const localizePhoto = (p?: DetailPhoto): DetailPhoto | undefined =>
+    p && useNe
+      ? {
+          ...p,
+          alt: p.altNe ?? p.alt,
+          caption: p.captionNe ?? p.caption,
+        }
+      : p;
+  const introPhoto = localizePhoto(photos?.introduction);
+
+  // Gallery: keep src from the English detail, overlay localized alt/caption
+  const gallery = detail.gallery.map((g, i) => {
+    const localized = content.gallery[i];
+    return {
+      src: g.src,
+      alt: localized?.alt ?? g.alt,
+      caption: localized?.caption ?? g.caption,
+    };
+  });
 
   return (
     <>
@@ -102,8 +125,30 @@ export function HeritageDetailClient({
             ))}
           </div>
 
+          {introPhoto && (
+            <figure className="mt-8 max-w-3xl">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-line">
+                <Image
+                  src={introPhoto.src}
+                  alt={introPhoto.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <figcaption className="mt-2 text-xs leading-relaxed text-ink-soft">
+                {introPhoto.caption}
+              </figcaption>
+            </figure>
+          )}
+
           {sections.map((section) => (
-            <ContentSection key={section.id} section={section} />
+            <ContentSection
+              key={section.id}
+              section={section}
+              photo={localizePhoto(photos?.sections[section.id])}
+            />
           ))}
 
           <section className="border-t border-line/70 py-10">

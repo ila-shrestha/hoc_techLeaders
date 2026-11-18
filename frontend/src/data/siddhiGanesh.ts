@@ -133,7 +133,7 @@ export const siddhiGanesh: HeritageDetail = {
     },
   ],
   gallery: [
-    { alt: "Siddhi Ganesh Temple main idol", caption: "The main Siddhi Ganesh idol" },
+    { src: "/images/hero/siddhiGaneshInside.PNG", alt: "Siddhi Ganesh Temple main idol", caption: "The main Siddhi Ganesh idol" },
     { alt: "Buddhist Chaitya within the temple premises", caption: "The Buddhist Chaitya on the premises" },
     { alt: "Patti platform at Siddhi Ganesh Temple", caption: "The traditional Patti platform" },
     { alt: "Devotees during a festival at Siddhi Ganesh Temple", caption: "Festival gatherings at the temple" },

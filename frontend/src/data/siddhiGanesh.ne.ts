@@ -1,158 +1,153 @@
-import type { HeritageDetail } from "./types";
+import type { HeritageDetail } from './types';
 
 /**
  * सिद्धि गणेश मन्दिर — नेपाली सामग्री।
  * सामग्री स्रोत: सिद्धि गणेश पूजा समितिका अध्यक्ष शान्ताराम महर्जीसँगको अन्तर्वार्ता।
+ * ठूला वाक्यांशहरूको नेपाली अनुवाद बाँकी छ; त्यहाँ अंग्रेजी राखिएको छ।
  */
 export const siddhiGaneshNe: Omit<
   HeritageDetail,
-  "slug" | "image" | "imageAlt" | "status" | "featured" | "relatedSlugs"
+  'slug' | 'image' | 'imageAlt' | 'status' | 'featured' | 'references' | 'relatedSlugs'
 > = {
-  name: "सिद्धि गणेश मन्दिर",
+  name: 'सिद्धि गणेश मन्दिर',
   summary:
-    "क्षेत्रको मूल र महत्त्वपूर्ण गणेश प्रतिमा मानिने मनपर्ने छिमेकी मन्दिर।",
+    "A beloved neighbourhood temple regarded by the community as the area's original and significant Ganesh idol.",
   introduction: [
-    "सिद्धि गणेश मन्दिर वार्ड १६ को मनपर्ने आराधना स्थल हो।",
-    "यहाँ चाडपर्व, पारिवारिक अनुष्ठान र साझा स्मृतिहरू हुन्छन्।",
-    "तलको विवरण शान्ताराम महर्जीसँगको अन्तर्वार्ताबाट लिइएको हो।",
+    "Siddhi Ganesh Temple stands as one of Ward 16's most cherished places of worship and community life. For local residents, it is more than a temple — it is a gathering point for festivals, family rituals, and shared memory.",
+    'The account below is drawn from an interview with Shantaram Maharjan, President of the Siddhi Ganesh Puja Samiti, and reflects both documented history and the living traditions of the neighbourhood.',
   ],
   sections: [
     {
-      id: "history",
-      title: "ऐतिहासिक पृष्ठभूमि",
-      eyebrow: "अभिलेखित इतिहास",
+      id: 'history',
+      title: 'ऐतिहासिक पृष्ठभूमि',
+      eyebrow: 'अभिलेखित इतिहास',
       blocks: [
         {
           paragraphs: [
-            "मन्दिरवरिपरिको क्षेत्र पहिले सल्लाघारी नामले परिचित थियो।",
-            "त्यहाँ बासिन्दा थोरै थिए।",
-            "कृषि खेतले भूभागको धेरै भाग ओगटेको थियो।",
-            "मानिसहरूले बिष्णुमती नदीमा नुहाउने गर्थे।",
-            "स्थानीय इनार महत्त्वपूर्ण पानीको स्रोत थियो। समयसँगै बस्ती क्रमशः हालको बस्तीमा बदलियो।",
+            'The area surrounding the temple was previously known as Sallaghari. In earlier times it had very few residential houses, and agricultural fields occupied much of the land.',
+            'People used the Bishnumati River for bathing and relied on a local well as an important water source. Over time, the settlement gradually developed into the populated neighbourhood it is today.',
           ],
         },
       ],
     },
     {
-      id: "significance",
-      title: "धार्मिक महत्व",
-      eyebrow: "समुदायिक विश्वास",
+      id: 'significance',
+      title: 'धार्मिक महत्व',
+      eyebrow: 'समुदायिक विश्वास',
       blocks: [
         {
           paragraphs: [
-            "स्थानीय बासिन्दाहरू सिद्धि गणेशलाई क्षेत्रको मूल गणेश प्रतिमा मान्छन्।",
-            "नवविवाहित जोडी विवाहपछि परम्परागत रूपमा मन्दिर आउँछन्।",
-            "मानिसहरूले वर्षभर मन्दिरमा प्रार्थना गर्न र आशीर्वाद लिन्छन्।",
+            'Local residents regard Siddhi Ganesh as the original and significant Ganesh idol of the area. According to community belief, worship here is associated with prosperity, happiness, and well-being.',
+            'Newly married couples traditionally visit the temple after their marriage, and people come throughout the year to offer prayers and make wishes.',
           ],
         },
       ],
-      note: "यहाँ वर्णित महत्व अन्तर्वार्तामा साझा गरिएको स्थानीय समुदायको विश्वास र प्रथाहरूलाई प्रतिबिम्बित गर्छ।",
+      note: 'The significance described here reflects the beliefs and practices of the local community, as shared in the interview.',
     },
     {
-      id: "folklore",
-      title: "स्थानीय लोककथा",
-      eyebrow: "लोककथा",
+      id: 'folklore',
+      title: 'स्थानीय लोककथा',
+      eyebrow: 'लोककथा',
       blocks: [
         {
           paragraphs: [
-            "त्यहाँAlign-freeSitesLength ví-lengths ví...",
-            "त्यस कथामा इनारनजिकAlign-freeSitesLength ví-lengths ví...",
+            "A traditional story told in the community describes a giant snake believed to have lived near the temple well. The tale is part of the area's oral heritage and is shared here as local folklore — it is not a verified historical event.",
           ],
         },
       ],
-      note: "यो कथा अन्तर्वार्तामा साझा गरिएको लोककथा हो, अभिलेखित ऐतिहासिक तथ्य होइन।",
+      note: 'This story is presented as folklore shared during the interview, not as a documented historical fact.',
     },
     {
-      id: "festivals",
-      title: "चाडपर्व र अनुष्ठानहरू",
-      eyebrow: "जीवन्त परम्पराहरू",
+      id: 'festivals',
+      title: 'चाडपर्व र अनुष्ठानहरू',
+      eyebrow: 'जीवन्त परम्पराहरू',
       blocks: [
-            "वर्षभर मन्दिर चाडपर्व र नियमित पूजाले Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths temple comes aliveAlign... Align-lengths interviewAlign... Align-lengths principalAlign... Align-lengths includeAlign...",
-            "गणेश चतुर्थी — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "च्याम्मा पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "दीवाली पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "डुबे पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "तिसबिचा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "डुबे पूजा — Align-lengths community ritualAlign...",
-            "तिसबिचा — Align-lengths twelfth tithiAlign...",
+            'The temple comes alive throughout the year with festivals and regular worship. According to the interview documentation, the principal observances include:',
           ],
-        },
-      ],
-    },
-    {
-      id: "structures",
-      title: "सांस्कृतिक संरचनाहरू",
-      eyebrow: "परिसरभित्र",
-      blocks: [
-            "मन्दिर Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-          paragraphs: [
-            "Align-lengths temple groundsAlign... Align-lengths structuresAlign... Align-lengths importanceAlign...",
-            "मुख्य Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "बौद्ध Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "Align-lengths Buddhist ChaityaAlign... Align-lengths premisesAlign... Align-lengths heritageAlign...",
-            "Align-lengths PattiAlign... Align-lengths platformAlign... Align-lengths worshipAlign... Align-lengths gatheringsAlign...",
+          list: [
+            'Ganesh Chaturthi — the major festival honouring Lord Ganesh.',
+            'Chyamma Puja — a traditional worship observance at the temple.',
+            'Devali Puja — celebrated with special prayers and offerings.',
+            'Dumbhe Puja — a community ritual observed at the site.',
+            'Tisabicha — a regular worship day marking the twelfth tithi.',
           ],
         },
       ],
     },
     {
-      id: "community",
-      title: "समुदायको सहभागिता",
-      eyebrow: "सामुदायिक जीवन",
+      id: 'structures',
+      title: 'सांस्कृतिक संरचनाहरू',
+      eyebrow: 'परिसरभित्र',
       blocks: [
-            "मन्दिरAlign-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths temple sustainedAlign... Align-lengths Puja SamitiAlign... Align-lengths coordinatesAlign... Align-lengths donationsAlign... Align-lengths preservationAlign...",
+            'The temple grounds hold several structures of cultural and religious importance:',
+          ],
+          list: [
+            'The main Siddhi Ganesh idol — the focus of devotion.',
+            "A Buddhist Chaitya within the temple premises, reflecting the neighbourhood's shared religious heritage.",
+            'Patti — a traditional raised platform used in worship and gatherings.',
           ],
         },
       ],
     },
     {
-      id: "preservation",
-      title: "संरक्षणका चुनौतीहरू",
-      eyebrow: "अगाडि हेर्दा",
+      id: 'community',
+      title: 'समुदायको सहभागिता',
+      eyebrow: 'सामुदायिक जीवन',
       blocks: [
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths drainageAlign... Align-lengths water-blockageAlign... Align-lengths monsoonAlign... Align-lengths preservationAlign...",
+            'The temple is sustained by the Siddhi Ganesh Puja Samiti, a community organization that coordinates festivals, worship, and upkeep. Local residents contribute through donations and voluntary religious activities, and many take part in efforts to preserve the temple and its traditions.',
           ],
         },
       ],
     },
     {
-      eyebrow: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-      title: "आगन्तुक जानकारी",
-      eyebrow: "Align-lengths plan your visitAlign...",
+      id: 'preservation',
+      title: 'संरक्षणका चुनौतीहरू',
+      eyebrow: 'अगाडि हेर्दा',
       blocks: [
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths worshipAlign... Align-lengths TuesdaysAlign... Align-lengths festivalsAlign... Align-lengths namesAlign...",
+            "The interview documentation notes ongoing drainage and water-blockage problems around the temple, particularly during the monsoon season. These issues affect the temple environment and are a concern for the community's preservation efforts.",
           ],
         },
       ],
     },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-lengths Patti platformAlign...", caption: "Align-lengths Patti platformAlign..." },
-    { alt: "Align-lengths devoteesAlign... Align-lengths festivalAlign...", caption: "Align-lengths festivalAlign... Align-lengths gatheringsAlign..." },
+    {
+      id: 'visit',
+      title: 'आगन्तुक जानकारी',
+      eyebrow: 'Plan your visit',
+      blocks: [
+        {
+          paragraphs: [
+            'Worship at the temple follows traditional practice, with regular activities on Tuesdays. The site is especially lively during major festivals such as Ganesh Chaturthi, Chyamma Puja, Devali Puja, Dumbhe Puja, and Tisabicha.',
+          ],
+        },
+      ],
+    },
   ],
-      title: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+  gallery: [
+    { alt: 'सिद्धि गणेश मन्दिरको मुख्य हिरो', caption: 'मुख्य सिद्धि गणेश हिरो' },
+    { alt: 'मन्दिर परिसरभित्रको बौद्ध चैति', caption: 'परिसरभित्रको बौद्ध चैति' },
+    { alt: 'सिद्धि गणेश मन्दिरको पत्ति', caption: 'परम्परागत पत्ति' },
     {
-        "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+      alt: 'Devotees during a festival at Siddhi Ganesh Temple',
+      caption: 'Festival gatherings at the temple',
+    },
+  ],
+  videos: [
+    {
+      title: 'सिद्धि गणेश मन्दिर — छिमेकी सम्पदा',
       description:
-        "Align-lengths introductoryAlign... Align-lengths filmAlign... Align-lengths festivalsAlign... Align-lengths communityAlign... Align-lengths VideoAlign... Align-lengths comingAlign... Align-lengths soonAlign...",
+        'An introductory film about the temple, its festivals, and the community that sustains it. Video coming soon.',
     },
-    landmark: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-    note: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-    landmark: "Align-lengths SallaghariAlign... Align-lengths WardAlign... Align-lengths 16Align...",
-    note: "Align-lengths historicallyAlign... Align-lengths SallaghariAlign...",
-    "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-  references: [
-    "Align-lengths InterviewAlign... Align-lengths ShantaramAlign... Align-lengths MaharjanAlign... Align-lengths PresidentAlign... Align-lengths SiddhiAlign... Align-lengths GaneshAlign... Align-lengths PujaAlign... Align-lengths SamitiAlign...",
   ],
+  location: {
+    landmark: 'सल्लाघारी क्षेत्र, वार्ड १६',
+    note: 'The surrounding area was historically known as Sallaghari.',
+  },
 };

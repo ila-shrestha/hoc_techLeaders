@@ -54,8 +54,13 @@ export function HeroCarousel() {
   return (
     <div
       className="absolute inset-0"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Ward 16 heritage photographs"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
       onTouchEnd={(e) => {
         if (touchX.current === null || single) return;
@@ -70,7 +75,7 @@ export function HeroCarousel() {
           key={s.src}
           src={s.src}
           alt={s.alt}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 h-full w-full object-cover motion-safe:transition-opacity motion-safe:duration-700 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
         />
