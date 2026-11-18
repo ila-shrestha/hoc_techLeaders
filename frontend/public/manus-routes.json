@@ -1,7 +1,0 @@
-{
-  "routes": [
-    { "path": "/", "title": "Ward 16 Heritage" },
-    { "path": "/heritage/siddhi-ganesh", "title": "Siddhi Ganesh Temple" },
-    { "path": "/heritage/koncha-dyo", "title": "Koncha Dyo" }
-  ]
-}
