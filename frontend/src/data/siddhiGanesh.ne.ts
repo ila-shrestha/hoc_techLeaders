@@ -1,3 +1,4 @@
+
 import type { HeritageDetail } from "./types";
 
 /**
@@ -9,13 +10,16 @@ export const siddhiGaneshNe: Omit<
   "slug" | "image" | "imageAlt" | "status" | "featured" | "relatedSlugs"
 > = {
   name: "सिद्धि गणेश मन्दिर",
+
   summary:
     "क्षेत्रको मूल र महत्त्वपूर्ण गणेश प्रतिमा मानिने मनपर्ने छिमेकी मन्दिर।",
+
   introduction: [
     "सिद्धि गणेश मन्दिर वार्ड १६ को मनपर्ने आराधना स्थल हो।",
     "यहाँ चाडपर्व, पारिवारिक अनुष्ठान र साझा स्मृतिहरू हुन्छन्।",
     "तलको विवरण शान्ताराम महर्जीसँगको अन्तर्वार्ताबाट लिइएको हो।",
   ],
+
   sections: [
     {
       id: "history",
@@ -33,10 +37,11 @@ export const siddhiGaneshNe: Omit<
         },
       ],
     },
+
     {
       id: "significance",
       title: "धार्मिक महत्व",
-      eyebrow: "समुदायिक विश्वास",
+      eyebrow: "सामुदायिक विश्वास",
       blocks: [
         {
           paragraphs: [
@@ -46,8 +51,10 @@ export const siddhiGaneshNe: Omit<
           ],
         },
       ],
-      note: "यहाँ वर्णित महत्व अन्तर्वार्तामा साझा गरिएको स्थानीय समुदायको विश्वास र प्रथाहरूलाई प्रतिबिम्बित गर्छ।",
+      note:
+        "यहाँ वर्णित महत्व अन्तर्वार्तामा साझा गरिएको स्थानीय समुदायको विश्वास र प्रथाहरूलाई प्रतिबिम्बित गर्छ।",
     },
+
     {
       id: "folklore",
       title: "स्थानीय लोककथा",
@@ -55,104 +62,139 @@ export const siddhiGaneshNe: Omit<
       blocks: [
         {
           paragraphs: [
-            "त्यहाँAlign-freeSitesLength ví-lengths ví...",
-            "त्यस कथामा इनारनजिकAlign-freeSitesLength ví-lengths ví...",
+            "त्यहाँको इनारसँग सम्बन्धित एउटा स्थानीय लोककथा प्रचलित छ।",
+            "त्यस कथामा इनारनजिक घटेको घटनाबारे उल्लेख गरिएको छ।",
           ],
         },
       ],
-      note: "यो कथा अन्तर्वार्तामा साझा गरिएको लोककथा हो, अभिलेखित ऐतिहासिक तथ्य होइन।",
+      note:
+        "यो कथा अन्तर्वार्तामा साझा गरिएको लोककथा हो, अभिलेखित ऐतिहासिक तथ्य होइन.",
     },
+
     {
       id: "festivals",
       title: "चाडपर्व र अनुष्ठानहरू",
       eyebrow: "जीवन्त परम्पराहरू",
       blocks: [
-            "वर्षभर मन्दिर चाडपर्व र नियमित पूजाले Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths temple comes aliveAlign... Align-lengths interviewAlign... Align-lengths principalAlign... Align-lengths includeAlign...",
-            "गणेश चतुर्थी — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "च्याम्मा पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "दीवाली पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "डुबे पूजा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "तिसबिचा — Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "डुबे पूजा — Align-lengths community ritualAlign...",
-            "तिसबिचा — Align-lengths twelfth tithiAlign...",
+            "वर्षभर मन्दिर चाडपर्व र नियमित पूजाले जीवन्त रहन्छ।",
+            "मन्दिरमा वर्षभर विभिन्न धार्मिक तथा सांस्कृतिक गतिविधिहरू आयोजना गरिन्छन्।",
+          ],
+          list: [
+            "गणेश चतुर्थी",
+            "च्याम्मा पूजा",
+            "दीवाली पूजा",
+            "डुबे पूजा",
+            "तिसबिचा",
           ],
         },
       ],
     },
+
     {
       id: "structures",
       title: "सांस्कृतिक संरचनाहरू",
       eyebrow: "परिसरभित्र",
       blocks: [
-            "मन्दिर Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths temple groundsAlign... Align-lengths structuresAlign... Align-lengths importanceAlign...",
-            "मुख्य Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "बौद्ध Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-            "Align-lengths Buddhist ChaityaAlign... Align-lengths premisesAlign... Align-lengths heritageAlign...",
-            "Align-lengths PattiAlign... Align-lengths platformAlign... Align-lengths worshipAlign... Align-lengths gatheringsAlign...",
+            "मन्दिर परिसरमा विभिन्न धार्मिक तथा सांस्कृतिक संरचनाहरू रहेका छन्।",
+            "यी संरचनाहरूले मन्दिरको धार्मिक तथा सांस्कृतिक महत्त्व झल्काउँछन्।",
+            "परिसरमा मुख्य मन्दिर, बौद्ध चैत्य तथा पाटी जस्ता संरचनाहरू रहेका छन्।",
+            "पाटी स्थानीय बासिन्दाहरूको भेटघाट र सामुदायिक गतिविधिका लागि पनि महत्त्वपूर्ण स्थान हो।",
           ],
         },
       ],
     },
+
     {
       id: "community",
       title: "समुदायको सहभागिता",
       eyebrow: "सामुदायिक जीवन",
       blocks: [
-            "मन्दिरAlign-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths temple sustainedAlign... Align-lengths Puja SamitiAlign... Align-lengths coordinatesAlign... Align-lengths donationsAlign... Align-lengths preservationAlign...",
+            "मन्दिरको संरक्षण र नियमित पूजा सञ्चालनमा स्थानीय समुदायको महत्त्वपूर्ण भूमिका छ।",
+            "पूजा समितिले विभिन्न धार्मिक गतिविधिहरू समन्वय गर्नुका साथै मन्दिरको संरक्षणमा सहयोग गर्छ।",
           ],
         },
       ],
     },
+
     {
       id: "preservation",
       title: "संरक्षणका चुनौतीहरू",
       eyebrow: "अगाडि हेर्दा",
       blocks: [
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths drainageAlign... Align-lengths water-blockageAlign... Align-lengths monsoonAlign... Align-lengths preservationAlign...",
+            "मन्दिर संरक्षणका क्रममा ढल निकास, पानी जम्ने समस्या तथा वर्षायामसँग सम्बन्धित चुनौतीहरू देखिएका छन्।",
+            "मन्दिरको मौलिक स्वरूप र सांस्कृतिक महत्त्व जोगाउन निरन्तर संरक्षण आवश्यक छ।",
           ],
         },
       ],
     },
+
     {
-      eyebrow: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+      id: "visitor-info",
       title: "आगन्तुक जानकारी",
-      eyebrow: "Align-lengths plan your visitAlign...",
+      eyebrow: "भ्रमणको योजना",
       blocks: [
-            "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+        {
           paragraphs: [
-            "Align-lengths worshipAlign... Align-lengths TuesdaysAlign... Align-lengths festivalsAlign... Align-lengths namesAlign...",
+            "मन्दिरमा दर्शन तथा पूजा गर्न आगन्तुकहरू आउन सक्छन्।",
+            "मंगलबार र विभिन्न चाडपर्वका अवसरमा मन्दिरमा भक्तजनहरूको उपस्थिति बढी हुन सक्छ।",
           ],
         },
       ],
     },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-freeSitesLength ví-align-lengths ví-lengths ví...", caption: "Align-freeSitesLength ví-align-lengths ví-lengths ví..." },
-    { alt: "Align-lengths Patti platformAlign...", caption: "Align-lengths Patti platformAlign..." },
-    { alt: "Align-lengths devoteesAlign... Align-lengths festivalAlign...", caption: "Align-lengths festivalAlign... Align-lengths gatheringsAlign..." },
   ],
-      title: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
+
+  gallery: [
     {
-        "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-      description:
-        "Align-lengths introductoryAlign... Align-lengths filmAlign... Align-lengths festivalsAlign... Align-lengths communityAlign... Align-lengths VideoAlign... Align-lengths comingAlign... Align-lengths soonAlign...",
+      alt: "सिद्धि गणेश मन्दिरको दृश्य",
+      caption: "सिद्धि गणेश मन्दिर",
     },
-    landmark: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-    note: "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-    landmark: "Align-lengths SallaghariAlign... Align-lengths WardAlign... Align-lengths 16Align...",
-    note: "Align-lengths historicallyAlign... Align-lengths SallaghariAlign...",
-    "Align-freeSitesLength ví-align-lengths ví-lengths ví...",
-  references: [
-    "Align-lengths InterviewAlign... Align-lengths ShantaramAlign... Align-lengths MaharjanAlign... Align-lengths PresidentAlign... Align-lengths SiddhiAlign... Align-lengths GaneshAlign... Align-lengths PujaAlign... Align-lengths SamitiAlign...",
+    {
+      alt: "मन्दिर परिसरको दृश्य",
+      caption: "मन्दिर परिसर",
+    },
+    {
+      alt: "मन्दिरमा रहेका सांस्कृतिक संरचनाहरू",
+      caption: "सांस्कृतिक संरचनाहरू",
+    },
+    {
+      alt: "मन्दिरमा आयोजित धार्मिक गतिविधि",
+      caption: "धार्मिक गतिविधिहरू",
+    },
+    {
+      alt: "पाटी संरचना",
+      caption: "परम्परागत पाटी",
+    },
+    {
+      alt: "मन्दिरमा भेला भएका भक्तजनहरू",
+      caption: "चाडपर्व तथा सामुदायिक जमघट",
+    },
   ],
+
+  videos: [
+    {
+      title: "सिद्धि गणेश मन्दिर परिचय",
+      description:
+        "मन्दिरको इतिहास, चाडपर्व र सामुदायिक जीवनबारे परिचयात्मक भिडियो।",
+    },
+  ],
+
+  location: {
+    landmark: "सल्लाघारी, वार्ड नं. १६",
+    note:
+      "ऐतिहासिक रूपमा यस क्षेत्रलाई सल्लाघारी भनेर चिनिन्थ्यो।",
+  },
+
+  references: [
+    "सिद्धि गणेश पूजा समितिका अध्यक्ष शान्ताराम महर्जीसँग गरिएको अन्तर्वार्ता।",
+  ],
+
+ 
 };

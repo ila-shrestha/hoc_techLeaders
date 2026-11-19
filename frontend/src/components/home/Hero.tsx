@@ -1,154 +1,101 @@
+
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
-import { siddhiGanesh } from "@/data/siddhiGanesh";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/i18n/language";
-
-/** Ornamental Newari window — layered frame with lattice */
-function NewariWindow({
-  className = "",
-  children,
-}: {
-  className?: string;
-  children?: ReactNode;
-}) {
-  return (
-    <div className={`window-frame relative overflow-hidden rounded-sm bg-maroon-dark/60 ${className}`}>
-      <div className="pattern-dhaka absolute inset-0" />
-      {children}
-      {/* inner lattice bars */}
-      <div className="absolute inset-x-0 top-1/2 h-px bg-white/15" />
-      <div className="absolute inset-y-0 left-1/2 w-px bg-white/15" />
-      <div className="absolute inset-3 grid grid-cols-2">
-        {[0, 1, 2, 3].map((i) => (
-          <div key={i} className="border border-white/10" />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export function Hero() {
   const { t } = useLanguage();
-  const ref = useRef<HTMLElement>(null);
-  const [scrollY, setScrollY] = useState(0);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const element = heroRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
-
-  function onMouseMove(e: MouseEvent<HTMLElement>) {
-    const r = e.currentTarget.getBoundingClientRect();
-    setMouse({
-      x: ((e.clientX - r.left) / r.width - 0.5) * 2,
-      y: ((e.clientY - r.top) / r.height - 0.5) * 2,
-    });
-  }
-
-  const parallax = Math.min(scrollY * 0.25, 120);
-  const reduced =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const mx = reduced ? 0 : mouse.x;
-  const my = reduced ? 0 : mouse.y;
 
   return (
     <section
-      ref={ref}
-      onMouseMove={onMouseMove}
-      onMouseLeave={() => setMouse({ x: 0, y: 0 })}
-      className="surface-maroon pattern-dhaka relative flex min-h-[100svh] items-center overflow-hidden"
+      ref={heroRef}
+      className="relative mx-4 my-4 flex min-h-[85vh] items-center overflow-hidden rounded-2xl border-x-4 border-[#456B50]/50 bg-[#E9E1D4]"
     >
-      {/* Ambient glows */}
-      <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-darkred/30 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-bright/15 blur-[100px]" />
+      {/* Full background image - no cropping */}
+      <img
+        src="/images/homepage-bg.jpeg"
+        alt="Heritage architecture of Ward 16"
+        className="absolute inset-0 h-full w-full object-fill"
+      />
 
-      <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-4 pb-24 pt-32 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        {/* Copy */}
-        <div style={{ transform: `translateY(${parallax * 0.4}px)` }}>
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-paper/90 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-bright" />
+      {/* Translucent overlay */}
+      <div className="absolute inset-0 bg-white/40" />
+
+      {/* Hero content */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-16">
+        <div
+          className={`max-w-3xl transition-all duration-1000 ease-out ${
+            isVisible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-12 opacity-0"
+          }`}
+        >
+          {/* Badge */}
+          <p className="mb-6 inline-block rounded-full border border-[#174D35]/40 bg-white/60 px-5 py-2 text-sm font-semibold tracking-wider text-[#174D35] shadow-md">
             {t.hero.badge}
-          </span>
-          <h1 className="font-display text-4xl leading-[1.08] text-paper sm:text-5xl md:text-6xl lg:text-7xl">
+          </p>
+
+          {/* Main heading */}
+          <h1
+              className="mb-6 text-4xl font-extrabold leading-tight sm:text-5xl md:text-7xl"
+  style={{
+    color: "#00D9FF",
+   
+  }}
+>
+          
             {t.hero.heading}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
+
+          {/* Description */}
+          <p
+            className="mb-10 max-w-2xl text-base font-medium leading-relaxed text-[#183D2B] sm:text-lg md:text-xl"
+            style={{
+              textShadow: "0 1px 8px rgba(255,255,255,0.8)",
+            }}
+          >
             {t.hero.subheading}
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4">
             <Link
               href="/heritage"
-              className="rounded-full bg-paper px-8 py-4 text-sm font-bold uppercase tracking-wide text-maroon shadow-xl transition-all duration-300 hover:bg-bright hover:text-paper hover:shadow-[0_0_30px_rgba(255,0,0,0.4)] active:scale-95"
+              className="rounded-lg bg-[#174D35] px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#103B28] hover:shadow-xl"
             >
               {t.hero.ctaExplore}
             </Link>
+
             <Link
               href="/map"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-8 py-4 text-sm font-semibold text-paper backdrop-blur transition-all duration-300 hover:border-bright hover:bg-bright/20 active:scale-95"
+              className="rounded-lg border-2 border-[#456B50] bg-white/70 px-7 py-3.5 font-semibold text-[#123B2A] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
               {t.mapBtn}
             </Link>
           </div>
         </div>
-
-        {/* 3D architectural composition — cursor parallax per layer */}
-        <div
-          className="perspective-1200 relative hidden lg:block"
-          style={{
-            transform: `translate(${mx * -8}px, ${parallax + my * -6}px)`,
-            transition: "transform 0.4s cubic-bezier(0.22,1,0.36,1)",
-          }}
-        >
-          <div className="card-3d relative" style={{ transform: `rotateY(${mx * 4}deg) rotateX(${my * -3}deg)` }}>
-            {/* Back window — offset layer for depth */}
-            <NewariWindow
-              className="floaty absolute -left-14 top-4 h-72 w-52 opacity-50"
-              eslint-disable-next-line
-
-            />
-            {/* Middle layer — large tilted frame */}
-            <div style={{ transform: `translateZ(-60px) rotateY(${-8 + mx * 2}deg)` }}>
-              <NewariWindow className="relative h-[500px] w-[400px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7)]">
-                <div className="absolute inset-3 overflow-hidden">
-                  <div style={{ transform: `translateZ(40px) scale(1.08)` }} className="h-full w-full">
-                    <PlaceholderImage site={siddhiGanesh} priority />
-                  </div>
-                </div>
-              </NewariWindow>
-            </div>
-            {/* Foreground floating card — moves independently */}
-            <div
-              className="card-3d-inner floaty absolute -bottom-10 -right-12 w-56 rounded-2xl border border-white/15 bg-maroon-deep/85 p-5 shadow-[0_35px_70px_-15px_rgba(0,0,0,0.8)] backdrop-blur-md"
-              style={{
-                ["--rot" as string]: "3deg",
-                animationDelay: "1.2s",
-                transform: `translate(${mx * 14}px, ${my * 10}px) translateZ(80px)`,
-                transition: "transform 0.4s cubic-bezier(0.22,1,0.36,1)",
-              }}
-            >
-              <p className="font-display text-xl text-paper">{siddhiGanesh.name}</p>
-              <p className="mt-1.5 text-xs leading-relaxed text-paper/70">
-                {t.showcase.featured}
-              </p>
-              <div className="mt-3 h-1 w-10 rounded-full bg-bright" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-paper/50">
-        <div className="h-10 w-px bg-gradient-to-b from-transparent via-paper/60 to-transparent" />
       </div>
     </section>
   );
