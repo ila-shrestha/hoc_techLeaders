@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { getSiteBySlug, heritageSites } from "@/data/heritage";
 import { getHeritageDetail } from "@/data";
@@ -20,9 +21,19 @@ export async function generateMetadata({
   };
 }
 
-export default async function HeritageDetailPage({
+export default function HeritageDetailPage({
   params,
 }: PageProps<"/heritage/[slug]">) {
+  return (
+    <Suspense fallback={null}>
+      <HeritageDetail params={params} />
+    </Suspense>
+  );
+}
+
+async function HeritageDetail({
+  params,
+}: Pick<PageProps<"/heritage/[slug]">, "params">) {
   const { slug } = await params;
   const site = getSiteBySlug(slug);
   if (!site) notFound();
