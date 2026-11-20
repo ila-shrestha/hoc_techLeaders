@@ -46,8 +46,7 @@ export function GameLauncher() {
       <button
         onClick={() => setOpen(true)}
         aria-label={label}
-        className="group fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-maroon text-paper shadow-[0_4px_20px_rgba(131,0,0,0.5)] transition-all duration-300 hover:bg-darkred hover:shadow-[0_0_28px_rgba(188,2,2,0.6)] active:scale-90"
-      >
+        className="group fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-maroon text-paper shadow-[0_4px_20px_rgba(131,0,0,0.5)] transition-colors duration-300 hover:bg-darkred hover:shadow-[0_0_28px_rgba(188,2,2,0.6)] active:scale-90 animate-[gameHeartbeat_2.2s_ease-in-out_infinite]"      >
         <Gamepad2 size={24} strokeWidth={2} />
         <span className="pointer-events-none absolute right-full mr-3 hidden whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-paper opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 md:block">
           {tooltip}

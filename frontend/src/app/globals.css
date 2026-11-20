@@ -164,3 +164,20 @@ body {
     transition: none;
   }
 }
+@keyframes gameHeartbeat {
+  0%, 100% {
+    scale: 1;
+  }
+  12% {
+    scale: 1.08;
+  }
+  24% {
+    scale: 1;
+  }
+  36% {
+    scale: 1.05;
+  }
+  48% {
+    scale: 1;
+  }
+}

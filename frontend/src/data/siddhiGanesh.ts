@@ -155,19 +155,39 @@ export const siddhiGanesh: HeritageDetail = {
       ],
     },
   ],
+ 
   gallery: [
-    { src: "/images/hero/siddhiGaneshInside.PNG", alt: "Siddhi Ganesh Temple main idol", caption: "The main Siddhi Ganesh idol" },
-    { alt: "Buddhist Chaitya within the temple premises", caption: "The Buddhist Chaitya on the premises" },
-    { alt: "Patti platform at Siddhi Ganesh Temple", caption: "The traditional Patti platform" },
-    { alt: "Devotees during a festival at Siddhi Ganesh Temple", caption: "Festival gatherings at the temple" },
-  ],
-  videos: [
+     {
+    src: "/images/hero/siddhiganesh.JPG",
+    alt: "Main idol of Siddhi Ganesh Temple",
+    caption: "The main Siddhi Ganesh idol",
+  },
+  {
+    src: "/images/hero/Sidhiganeshoutsideidols.jpg",
+    alt: "Hindu deities within Siddhi Ganesh Temple premises",
+    caption: "Hindu deities within the temple premises",
+  },
+
     {
-      title: "Siddhi Ganesh Temple — a neighbourhood heritage",
-      description:
-        "An introductory film about the temple, its religious structures, festivals, and the community that sustains it. Video coming soon.",
+      src: "/images/hero/siddhiGaneshdhara.PNG",
+      alt: "Traditional stone water spout near Siddhi Ganesh Temple",
+      caption: "The traditional stone water spout (Dhungedhara)",
+    },
+    {
+      src: "/images/hero/siddhiGaneshNearbyMahadev.PNG",
+      alt: "Mahadev shrine near Siddhi Ganesh Temple",
+      caption: "The nearby Mahadev shrine",
     },
   ],
+
+videos: [
+  {
+    title: "Siddhi Ganesh Temple — a neighbourhood heritage",
+    description:
+      "A short video showcasing Siddhi Ganesh Temple and its religious and cultural significance in the neighbourhood.",
+    url: "https://www.youtube.com/embed/8rQKHZHIJOs",
+  },
+],
   location: {
     landmark: "Sallaghari area, Ward 16",
     note: "The surrounding area was historically known as Sallaghari.",

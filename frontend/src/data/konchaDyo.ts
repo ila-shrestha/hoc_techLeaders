@@ -113,19 +113,36 @@ export const konchaDyo: HeritageDetail = {
       ],
     },
   ],
-  gallery: [
-    { src: "/images/hero/konchadyo.jpeg", alt: "Koncha Dyo structure", caption: "The vessel-like form of Koncha Dyo" },
-    { alt: "Traditional Gagro vessel used in Newar practice", caption: "A traditional Gagro vessel" },
-    { alt: "Devotees at Koncha Dyo", caption: "Community visits and worship" },
-    { alt: "Koncha Dyo within the Ward 16 streetscape", caption: "Koncha Dyo in its neighbourhood setting" },
-  ],
-  videos: [
-    {
-      title: "Koncha Dyo — traditions of the Newar community",
-      description:
-        "An introduction to Koncha Dyo, exploring its vessel-like form, traditional Gagro associations, religious offerings, local folklore, and place within the cultural life of Ward 16. Video coming soon.",
-    },
-  ],
+gallery: [
+  {
+    src: "/images/hero/konchadyo.jpeg",
+    alt: "Koncha Dyo structure",
+    caption: "The vessel-like form of Koncha Dyo",
+  },
+  {
+    src: "/images/hero/konchdyo-temple.jpeg",
+    alt: "Koncha Dyo temple",
+    caption: "Temple of Koncha Dyo",
+  },
+  {
+    src: "/images/hero/goraknath.jpeg",
+    alt: "Gorakhnath picture",
+    caption: "Gorakhnath picture in the temple",
+  },
+  {
+    src: "/images/hero/outsidekonchaDyo.jpeg",
+    alt: "Koncha Dyo within the Ward 16 streetscape",
+    caption: "Koncha Dyo Temple",
+  },
+],
+ videos: [
+  {
+    title: "Koncha Dyo — traditions of the Newar community",
+    description:
+      "A short video introducing Koncha Dyo and its cultural and religious significance within the Newar community of Ward 16.",
+    url: "https://www.youtube.com/embed/PIv1U1f6m7k",
+  },
+],
   location: {
     landmark: "Sallaghari area, Ward 16",
     note: "The surrounding area was historically known as Sallaghari.",
