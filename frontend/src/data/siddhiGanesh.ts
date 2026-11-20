@@ -1,33 +1,35 @@
+
 import type { HeritageDetail } from "./types";
 
 /**
- * Siddhi Ganesh Temple — content organized from the interview with
- * Shantaram Maharjan, President of the Siddhi Ganesh Puja Samiti.
- * Beliefs and folklore are labeled as such; they are community accounts,
+ * Siddhi Ganesh Temple — content organized from community interview
+ * documentation. Beliefs and folklore are identified as local accounts,
  * not verified historical facts.
  */
 export const siddhiGanesh: HeritageDetail = {
   slug: "siddhi-ganesh",
   name: "Siddhi Ganesh Temple",
   summary:
-    "A beloved neighbourhood temple regarded by the community as the area's original and significant Ganesh idol.",
+    "A significant neighbourhood temple in Ward 16, regarded by the local community as the area's original and most important Ganesh shrine.",
   imageAlt: "Siddhi Ganesh Temple, Ward 16",
   status: "documented",
   featured: true,
   introduction: [
-    "Siddhi Ganesh Temple stands as one of Ward 16's most cherished places of worship and community life. For local residents, it is more than a temple — it is a gathering point for festivals, family rituals, and shared memory.",
-    "The account below is drawn from an interview with Shantaram Maharjan, President of the Siddhi Ganesh Puja Samiti, and reflects both documented history and the living traditions of the neighbourhood.",
+    "Siddhi Ganesh Temple is one of the important religious and cultural landmarks of Ward 16, Balaju. The temple serves not only as a place of worship but also as a centre for community gatherings, traditional festivals, family rituals and shared cultural practices.",
+    "Its history and significance are closely connected with the development of the surrounding settlement and the religious traditions maintained by local residents. The following account draws on community interview documentation and local traditions, distinguishing between historical accounts, religious beliefs and oral folklore.",
   ],
   sections: [
     {
       id: "history",
       title: "Historical Background",
-      eyebrow: "Documented history",
+      eyebrow: "History and settlement",
       blocks: [
         {
           paragraphs: [
-            "The area surrounding the temple was previously known as Sallaghari. In earlier times it had very few residential houses, and agricultural fields occupied much of the land.",
-            "People used the Bishnumati River for bathing and relied on a local well as an important water source. Over time, the settlement gradually developed into the populated neighbourhood it is today.",
+            "According to local accounts, Siddhi Ganesh Temple is believed to have been established during the reign of King Pratap Malla (1641–1674). Its origins are traditionally associated with the historical period in which Rani Pokhari was constructed. However, this connection has not been independently verified through historical records.",
+            "The surrounding area was formerly known as Sallaghari. In earlier times, the settlement had relatively few residential houses, and much of the surrounding land consisted of agricultural fields. The neighbourhood gradually developed as more people settled in the area.",
+            "Before the availability of modern water facilities, residents depended on local sources for their daily needs. The Bishnumati River was used for bathing, while a nearby well served as an important source of water. The settlement and its surrounding religious structures gradually developed alongside the growth of the neighbourhood.",
+            "The temple is regarded by many local residents as the original and most significant Ganesh shrine in the area. Other Ganesh idols and places of worship are believed by the community to have been established later.",
           ],
         },
       ],
@@ -35,29 +37,32 @@ export const siddhiGanesh: HeritageDetail = {
     {
       id: "significance",
       title: "Religious Significance",
-      eyebrow: "Community belief",
+      eyebrow: "Community belief and worship",
       blocks: [
         {
           paragraphs: [
-            "Local residents regard Siddhi Ganesh as the original and significant Ganesh idol of the area. According to community belief, worship here is associated with prosperity, happiness, and well-being.",
-            "Newly married couples traditionally visit the temple after their marriage, and people come throughout the year to offer prayers and make wishes.",
+            "Siddhi Ganesh is worshipped as a powerful form of Lord Ganesh, associated with success, victory and the removal of obstacles. The deity is also locally associated with the names Veer Ganapati and Veera Vignesha. Devotees seek blessings before beginning new ventures, undertaking important activities or facing significant challenges.",
+            "The temple's main deity is an ancient black stone idol adorned with silver. For local devotees, the shrine represents protection, prosperity, happiness and well-being. These beliefs form an important part of the religious identity of the surrounding community.",
+            "Newly married couples traditionally visit the temple after their marriage to seek blessings for a harmonious and prosperous married life. Residents also visit throughout the year to offer prayers, make wishes and express gratitude.",
+            "Tuesday is considered an important day for worship, and the temple often receives a large number of devotees. Religious observances and festivals bring together residents from the surrounding neighbourhoods.",
           ],
         },
       ],
-      note: "The significance described here reflects the beliefs and practices of the local community, as shared in the interview.",
+      note: "The religious interpretations and beliefs described in this section reflect local community traditions and are not presented as independently verified historical or theological claims.",
     },
     {
       id: "folklore",
       title: "Local Folklore",
-      eyebrow: "Folklore",
+      eyebrow: "Oral traditions",
       blocks: [
         {
           paragraphs: [
-            "A traditional story told in the community describes a giant snake believed to have lived near the temple well. The tale is part of the area's oral heritage and is shared here as local folklore — it is not a verified historical event.",
+            "A traditional story shared by local residents describes a giant snake believed to have lived near the well in the temple area. According to the tale, when the snake moved or wagged its tail, water would accumulate in the well. The story has been passed down through generations and forms part of the neighbourhood's oral heritage.",
+            "Local accounts also describe the temple as having remained unharmed during major earthquakes. Some residents interpret this as a sign of the deity's protective power. This belief has strengthened the temple's religious significance within the community.",
           ],
         },
       ],
-      note: "This story is presented as folklore shared during the interview, not as a documented historical fact.",
+      note: "These accounts are presented as local folklore and religious beliefs. They have not been established as verified historical or scientific events.",
     },
     {
       id: "festivals",
@@ -66,14 +71,20 @@ export const siddhiGanesh: HeritageDetail = {
       blocks: [
         {
           paragraphs: [
-            "The temple comes alive throughout the year with festivals and regular worship. According to the interview documentation, the principal observances include:",
+            "Religious festivals and regular worship are central to the temple's community life. Residents gather throughout the year to perform rituals, offer prayers and participate in traditional observances. The principal festivals and practices include:",
           ],
           list: [
-            "Ganesh Chaturthi — the major festival honouring Lord Ganesh.",
-            "Chyamma Puja — a traditional worship observance at the temple.",
-            "Devali Puja — celebrated with special prayers and offerings.",
-            "Dumbhe Puja — a community ritual observed at the site.",
-            "Tisabicha — a regular worship day marking the twelfth tithi.",
+            "Ganesh Chaturthi — an important festival dedicated to Lord Ganesh, observed with prayers and gatherings of devotees.",
+            "Chyamma Puja — an annual observance held one day before Fulpati during Dashain. People from surrounding neighbourhoods participate in the ritual, which is traditionally associated with seeking forgiveness for mistakes committed knowingly or unknowingly throughout the year.",
+            "Devali Puja — a traditional family and community observance involving prayers and offerings.",
+            "Dumbhe Puja — a religious practice maintained through local family and community traditions.",
+            "Tisabicha — a regular worship observance associated with the twelfth lunar day (Dwadashi tithi).",
+          ],
+        },
+        {
+          paragraphs: [
+            "Tuesday worship is another important part of the temple's regular religious activities. During major festivals, the premises become a gathering place for devotees and families from the surrounding toles.",
+            "The temple does not rely on officially appointed priests for every ritual. According to community accounts, devotees and other individuals voluntarily take responsibility for conducting prayers and religious activities.",
           ],
         },
       ],
@@ -85,12 +96,16 @@ export const siddhiGanesh: HeritageDetail = {
       blocks: [
         {
           paragraphs: [
-            "The temple grounds hold several structures of cultural and religious importance:",
+            "The temple premises contain several religious structures and idols representing different aspects of the area's Hindu and Buddhist traditions. Together, they form a shared place of worship and reflect the religious diversity maintained within the neighbourhood.",
           ],
           list: [
-            "The main Siddhi Ganesh idol — the focus of devotion.",
-            "A Buddhist Chaitya within the temple premises, reflecting the neighbourhood's shared religious heritage.",
-            "Patti — a traditional raised platform used in worship and gatherings.",
+            "Main Siddhi Ganesh Shrine — the principal place of worship, housing the ancient black stone idol of Lord Ganesh, adorned with silver.",
+            "Buddhist Chaitya — a chaitya located within the temple premises. According to local accounts, it was established through the efforts of an earlier local family. Its presence reflects the coexistence of Hindu and Buddhist religious traditions in the area.",
+            "Shiva Mandir — situated directly in front of the main Siddhi Ganesh Temple. The shrine contains a Shivalinga, along with a Jaladhara and Dharapatra used in ritual water offerings, and a Nandi statue positioned as the sacred vehicle of Lord Shiva.",
+            "Bhajan Hall — a dedicated space for devotional singing and religious gatherings. It contains idols of Radha and Krishna, along with representations of other Hindu deities.",
+            "Other Deities within the Premises — the temple grounds also contain a large idol of Saraswati Mata, along with idols of Shani Dev, Hanuman and several smaller representations of gods and goddesses.",
+            "Small Radha-Krishna Mandir — a separate, smaller shrine located beside the staircase within the temple premises, distinct from the Radha-Krishna idols in the bhajan hall.",
+            "Patti — a traditional raised platform associated with community gatherings and religious activities. Its construction is remembered in local accounts as part of the community's efforts to develop the temple surroundings.",
           ],
         },
       ],
@@ -98,11 +113,14 @@ export const siddhiGanesh: HeritageDetail = {
     {
       id: "community",
       title: "Community Involvement",
-      eyebrow: "Community life",
+      eyebrow: "Community life and management",
       blocks: [
         {
           paragraphs: [
-            "The temple is sustained by the Siddhi Ganesh Puja Samiti, a community organization that coordinates festivals, worship, and upkeep. Local residents contribute through donations and voluntary religious activities, and many take part in efforts to preserve the temple and its traditions.",
+            "The Siddhi Ganesh Puja Samiti plays an important role in coordinating worship, festivals and the general upkeep of the temple. The organization helps maintain religious practices and supports activities that bring together residents from the surrounding neighbourhoods.",
+            "The development and maintenance of the temple premises have been supported through community donations and voluntary contributions. Residents participate in religious activities, family observances and collective efforts to preserve the site's cultural traditions.",
+            "Some traditional practices involve the offering and safekeeping of jewellery and other valuable items during religious observances. The community organization is entrusted with safeguarding such offerings as part of its responsibilities.",
+            "The temple's cultural significance is therefore not limited to its physical structures. It is also sustained through the participation, memories and religious practices of the people who continue to use and maintain the site.",
           ],
         },
       ],
@@ -110,11 +128,14 @@ export const siddhiGanesh: HeritageDetail = {
     {
       id: "preservation",
       title: "Preservation Challenges",
-      eyebrow: "Looking ahead",
+      eyebrow: "Conservation and local concerns",
       blocks: [
         {
           paragraphs: [
-            "The interview documentation notes ongoing drainage and water-blockage problems around the temple, particularly during the monsoon season. These issues affect the temple environment and are a concern for the community's preservation efforts.",
+            "Drainage and waterlogging are among the concerns affecting the temple surroundings, particularly during the monsoon season. Rainwater and wastewater from nearby roads and houses can accumulate around the area when the drainage system does not provide an adequate outlet.",
+            "Local concerns include the need for a more effective drainage route near the surrounding roads and coordination with the relevant authorities to address the problem. Poor drainage can affect the cleanliness of the temple environment and create difficulties for residents and visitors.",
+            "Improving the drainage system, providing separate arrangements for rainwater and household wastewater, and carrying out maintenance before the monsoon season would help protect the temple surroundings.",
+            "Preserving the site also requires continued community participation and greater awareness of its historical, religious and cultural importance, particularly among younger generations.",
           ],
         },
       ],
@@ -126,7 +147,9 @@ export const siddhiGanesh: HeritageDetail = {
       blocks: [
         {
           paragraphs: [
-            "Worship at the temple follows traditional practice, with regular activities on Tuesdays. The site is especially lively during major festivals such as Ganesh Chaturthi, Chyamma Puja, Devali Puja, Dumbhe Puja, and Tisabicha.",
+            "Siddhi Ganesh Temple is located in the Sallaghari area of Ward 16, Balaju, Kathmandu. It remains an active place of worship for residents of the surrounding neighbourhoods.",
+            "Tuesday is an important day for regular worship, while festivals such as Ganesh Chaturthi and Chyamma Puja attract larger gatherings. Visitors may also encounter religious activities during other traditional observances.",
+            "Visitors are encouraged to respect ongoing prayers and rituals, maintain the cleanliness of the premises and follow local customs while visiting the temple and its surrounding shrines.",
           ],
         },
       ],
@@ -142,7 +165,7 @@ export const siddhiGanesh: HeritageDetail = {
     {
       title: "Siddhi Ganesh Temple — a neighbourhood heritage",
       description:
-        "An introductory film about the temple, its festivals, and the community that sustains it. Video coming soon.",
+        "An introductory film about the temple, its religious structures, festivals, and the community that sustains it. Video coming soon.",
     },
   ],
   location: {
@@ -150,7 +173,7 @@ export const siddhiGanesh: HeritageDetail = {
     note: "The surrounding area was historically known as Sallaghari.",
   },
   references: [
-    "Interview with Shantaram Maharjan, President of the Siddhi Ganesh Puja Samiti.",
+    "Community interview documentation and local accounts concerning the history, religious practices and cultural traditions of Siddhi Ganesh Temple.",
   ],
   relatedSlugs: ["koncha-dyo", "22-dhara", "sitala-ajima", "mhepi-ajima", "gurunakak"],
 };
