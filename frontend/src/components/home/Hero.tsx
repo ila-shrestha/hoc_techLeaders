@@ -76,8 +76,8 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-maroon-deep/75 via-maroon-deep/60 to-maroon-deep/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-maroon-deep/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-maroon-deep/40 via-maroon-deep/30 to-maroon-deep/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-maroon-deep/40 via-transparent to-transparent" />
         <div className="pattern-dhaka absolute inset-0 opacity-60" />
       </div>
 
@@ -86,8 +86,8 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-bright/15 blur-[100px]" />
 
       {/* Decorative Newari window motifs at the side margins (wide screens only) */}
-      <NewariWindow className="pointer-events-none absolute left-8 top-1/4 hidden h-56 w-40 opacity-30 2xl:block" />
-      <NewariWindow className="pointer-events-none absolute bottom-1/4 right-8 hidden h-56 w-40 opacity-30 2xl:block" />
+      <NewariWindow className="pointer-events-none absolute left-10 top-2/4 hidden h-56 w-40 opacity-30 2xl:block" />
+      <NewariWindow className="pointer-events-none absolute bottom-2/4 right-16 hidden h-56 w-40 opacity-30 2xl:block" />
 
       <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-4 pb-24 pt-32 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Copy */}
@@ -96,7 +96,7 @@ export function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-bright" />
             {t.hero.badge}
           </span>
-          <h1 className="font-display text-4xl leading-[1.08] text-paper sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl leading-[1.08] text-white sm:text-5xl md:text-6xl lg:text-7xl">
             {t.hero.heading}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
@@ -132,11 +132,11 @@ export function Hero() {
         >
           <div className="card-3d relative" style={{ transform: `rotateY(${mx * 4}deg) rotateX(${my * -3}deg)` }}>
             {/* Back window — offset layer for depth */}
-            <NewariWindow
+            {/* <NewariWindow
               className="floaty absolute -left-14 top-4 h-72 w-52 opacity-50"
               eslint-disable-next-line
 
-            />
+            /> */}
             {/* Middle layer — large tilted frame */}
             <div style={{ transform: `translateZ(-60px) rotateY(${-8 + mx * 2}deg)` }}>
               <NewariWindow className="relative h-[500px] w-[400px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7)]">
@@ -149,7 +149,7 @@ export function Hero() {
               </NewariWindow>
             </div>
             {/* Foreground floating card — moves independently */}
-            <div
+            {/* <div
               className="card-3d-inner floaty absolute -bottom-10 -right-12 w-56 rounded-2xl border border-white/15 bg-maroon-deep/85 p-5 shadow-[0_35px_70px_-15px_rgba(0,0,0,0.8)] backdrop-blur-md"
               style={{
                 ["--rot" as string]: "3deg",
@@ -157,13 +157,13 @@ export function Hero() {
                 transform: `translate(${mx * 14}px, ${my * 10}px) translateZ(80px)`,
                 transition: "transform 0.4s cubic-bezier(0.22,1,0.36,1)",
               }}
-            >
-              <p className="font-display text-xl text-paper">{siddhiGanesh.name}</p>
-              <p className="mt-1.5 text-xs leading-relaxed text-paper/70">
+            > */}
+            {/* <p className="font-display text-xl text-paper">{siddhiGanesh.name}</p> */}
+            {/* <p className="mt-1.5 text-xs leading-relaxed text-paper/70">
                 {t.showcase.featured}
-              </p>
-              <div className="mt-3 h-1 w-10 rounded-full bg-bright" />
-            </div>
+              </p> */}
+            {/* <div className="mt-3 h-1 w-10 rounded-full bg-bright" /> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
