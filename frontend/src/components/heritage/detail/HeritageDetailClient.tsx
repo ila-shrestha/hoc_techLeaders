@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -89,6 +90,9 @@ export function HeritageDetailClient({
     <>
       <DetailHero site={site} detail={detail} />
 
+      {/* YouTube video appears before the description */}
+      <VideoSection videos={videos} />
+
       <nav className="border-b border-line bg-mist">
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-4 sm:px-6">
           {sections.map((section) => (
@@ -176,7 +180,7 @@ export function HeritageDetailClient({
       </article>
 
       <Gallery detail={detail} images={gallery} />
-      <VideoSection videos={videos} />
+
       <RelatedSites slugs={detail.relatedSlugs} />
     </>
   );

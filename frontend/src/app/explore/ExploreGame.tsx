@@ -1,66 +1,43 @@
+
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { Gamepad2 } from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { HeritageCard } from "@/components/heritage/HeritageCard";
+import { heritageSites } from "@/data/heritage";
+import { useLanguage } from "@/i18n/language";
 
-export function ExploreGame() {
-  const [loaded, setLoaded] = useState(false);
-  const [failed, setFailed] = useState(false);
+export function ExploreHeritageView() {
+  const { t } = useLanguage();
 
   return (
-    <div className="fixed inset-0 z-40 bg-[#1a0d0d]">
-      {/* slim return bar */}
-      <div className="absolute left-3 top-3 z-50 flex items-center gap-2">
-        <Link
-          href="/"
-          className="flex items-center gap-1.5 rounded-full border border-[#F7F0E3]/25 bg-[#1a0d0d]/80 px-3.5 py-2 text-xs font-semibold text-[#F7F0E3] backdrop-blur transition-colors hover:bg-[#1a0d0d]"
-        >
-          <ArrowLeft size={13} />
-          Ward 16 Heritage
-        </Link>
+    <div className="bg-paper py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow={t.explorePage.eyebrow}
+          title={t.explorePage.title}
+          description={t.explorePage.description}
+        />
+
+        {/* Interactive game icon */}
+        <div className="mt-4 flex max-w-2xl justify-end">
+          <Link
+            href="/explore"
+            aria-label="Start interactive heritage exploration"
+            title="Start interactive exploration"
+            className="gamepad-pulse flex h-12 w-12 items-center justify-center rounded-full border-2 border-green-600 bg-green-50 text-yellow-500 transition-transform hover:scale-110"
+          >
+            <Gamepad2 size={25} strokeWidth={2.5} />
+          </Link>
+        </div>
+
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {heritageSites.map((site) => (
+            <HeritageCard key={site.slug} site={site} />
+          ))}
+        </div>
       </div>
-
-      {!loaded && !failed && (
-        <div className="absolute inset-0 z-40 flex flex-col items-center justify-center gap-4">
-          <div className="h-10 w-10 animate-spin rounded-full border-2 border-[#F7F0E3]/20 border-t-[#F2C14E]" />
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-[#F7F0E3]/60">
-            Entering Kathmandu Galli…
-          </p>
-        </div>
-      )}
-
-      {failed && (
-        <div className="absolute inset-0 z-40 flex flex-col items-center justify-center gap-4 p-6 text-center">
-          <p className="font-display text-xl text-[#F7F0E3]">The game could not be loaded</p>
-          <p className="max-w-sm text-sm text-[#F7F0E3]/60">
-            The 3D experience failed to start on this device. You can still browse all heritage sites.
-          </p>
-          <div className="flex gap-3">
-            <button
-              onClick={() => { setFailed(false); setLoaded(false); window.location.reload(); }}
-              className="rounded-full bg-[#F7F0E3] px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-[#830000]"
-            >
-              Retry
-            </button>
-            <Link
-              href="/heritage"
-              className="rounded-full border border-[#F7F0E3]/35 px-5 py-2.5 text-xs font-semibold text-[#F7F0E3]"
-            >
-              Browse heritage
-            </Link>
-          </div>
-        </div>
-      )}
-
-      <iframe
-        src="/explore/index.html"
-        title="Kathmandu Galli — Ward 16 Heritage Game"
-        className="h-full w-full border-0"
-        allow="fullscreen; gamepad"
-        onLoad={() => setLoaded(true)}
-        onError={() => setFailed(true)}
-      />
     </div>
   );
 }
