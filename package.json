@@ -9,6 +9,11 @@
     "backend:dev": "npm --prefix backend run dev"
   },
   "dependencies": {
-    "lucide-react": "^1.77.0"
+    "@react-three/fiber": "^9.8.2",
+    "lucide-react": "^1.77.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0"
   }
 }
