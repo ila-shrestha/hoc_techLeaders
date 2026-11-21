@@ -64,7 +64,7 @@ export function HeroCarousel() {
       console.log("Changing slide:", current, "to", next);
       return next;
     });
-  }, 500);
+  }, 4000);
 
   return () => window.clearInterval(interval);
 }, [count]);
@@ -96,7 +96,7 @@ export function HeroCarousel() {
     >
       {/* Sliding image track */}
       <div
-        className="flex h-full w-full transition-transform duration-300 ease-in-out"
+        className="flex h-full w-full transition-transform duration-900 ease-in-out"
         style={{
           transform: `translateX(-${index * 100}%)`,
         }}
