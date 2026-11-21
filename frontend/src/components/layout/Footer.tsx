@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/i18n/language";
 import { heritageSites } from "@/data/heritage";
 
 export function Footer() {
+  const pathname = usePathname();
   const yearRef = useRef<HTMLSpanElement>(null);
   const { lang, t } = useLanguage();
 
@@ -15,6 +17,8 @@ export function Footer() {
       yearRef.current.textContent = String(new Date().getFullYear());
     }
   }, []);
+
+  if (pathname === "/explore") return null;
 
   return (
     <footer className="mt-auto bg-ink text-paper">

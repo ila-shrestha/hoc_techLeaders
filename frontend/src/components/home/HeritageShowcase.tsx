@@ -27,7 +27,7 @@ export function HeritageShowcase() {
 
         <div className="relative mt-12">
           {/* Decorative dhaka strips flanking the carousel (desktop) */}
-          <div className="pattern-dhaka-dark pointer-events-none absolute -left-5 top-0 hidden h-full w-2.5 rounded-full opacity-70 lg:block" />
+          <div className="pattern-dhaka-light pointer-events-none absolute -left-5 top-0 hidden h-full w-2.5 rounded-full opacity-70 lg:block" />
           <div className="pattern-dhaka-dark pointer-events-none absolute -right-5 top-0 hidden h-full w-2.5 rounded-full opacity-70 lg:block" />
 
           <HeritageCarousel />

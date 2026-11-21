@@ -8,8 +8,15 @@ export const ne: Dictionary = {
   nav: {
     home: "गृहपृष्ठ",
     exploreHeritage: "सम्पदा अन्वेषण",
+    about: "बारेमा",
     aboutWard16: "वार्ड १६ बारे",
     chatbot: "च्याटबोट",
+    game: "खेल",
+    discover: "खोज्नुहोस्",
+    language: "भाषा",
+    map: "नक्सा",
+    exploreSites: "स्थलहरू अन्वेषण गर्नुहोस्",
+    exploreMap: "नक्सा अन्वेषण गर्नुहोस्",
     toggleMenu: "मेनु खोल्नुहोस् / बन्द गर्नुहोस्",
   },
   chatbot: {
@@ -20,7 +27,7 @@ export const ne: Dictionary = {
   },
   hero: {
     badge: "वार्ड १६ · सांस्कृतिक सम्पदा",
-    heading: "हाम्रा सम्पदाका कथाहरूको संरक्षण",
+    heading: "हाम्रो सम्पदामा कोरिएका कथाहरू",
     subheading:
       "वार्ड १६ का मन्दिर, परम्परा र जीवन्त संस्कृतिको अन्वेषण गर्नुहोस्।",
     ctaExplore: "सम्पदा अन्वेषण गर्नुहोस्",

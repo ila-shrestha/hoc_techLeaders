@@ -1,8 +1,9 @@
+
 import type { HeritageDetail } from './types';
 
 /**
  * कोंचा द्यो — नेपाली सामग्री।
- * ठूला वाक्यांशहरूको नेपाली अनुवाद बाँकी छ; त्यहाँ अंग्रेजी राखिएको छ।
+ * समुदायबाट प्राप्त जानकारी, परम्परा तथा स्थानीय विश्वासमा आधारित।
  */
 export const konchaDyoNe: Omit<
   HeritageDetail,
@@ -10,21 +11,23 @@ export const konchaDyoNe: Omit<
 > = {
   name: 'कोंचा द्यो',
   summary:
-    'A traditional Newar heritage site whose vessel-like form recalls the Gagro once used in religious offerings.',
+    'परम्परागत नेवार सम्पदा स्थल, जसको भाँडोजस्तो स्वरूपले धार्मिक कार्यमा प्रयोग हुने गाग्रोको सम्झना गराउँछ।',
+
   introduction: [
-    "Koncha Dyo is a distinctive heritage site in Ward 16, shaped by the traditions of the local Newar community. Its unique form and ritual associations make it an important part of the neighbourhood's living cultural identity.",
-    'The account below is drawn from the provided interview notes and reflects community beliefs and practices as documented — not independently verified history.',
+    'घाम्पेस्तान नामले पनि चिनिने कोंचा द्यो काठमाडौंको बालाजुस्थित वडा नं. १६ मा रहेको एक विशिष्ट धार्मिक तथा सांस्कृतिक सम्पदा स्थल हो। यसको विशेष भाँडोजस्तो स्वरूप र धार्मिक परम्परासँगको सम्बन्धले यसलाई स्थानीय नेवार समुदायको सांस्कृतिक पहिचानसँग जोडेको छ।',
+    'यस विवरणमा प्रस्तुत जानकारी उपलब्ध अन्तर्वार्ता तथा स्थानीय समुदायबाट प्राप्त विवरणमा आधारित छ। यसमा उल्लेख गरिएका धार्मिक मान्यता र परम्परालाई समुदायमा प्रचलित विश्वासका रूपमा प्रस्तुत गरिएको छ, स्वतन्त्र रूपमा प्रमाणित ऐतिहासिक तथ्यका रूपमा होइन।',
   ],
+
   sections: [
     {
       id: 'history',
       title: 'ऐतिहासिक पृष्ठभूमि',
-      eyebrow: 'अभिलेखित इतिहास',
+      eyebrow: 'ऐतिहासिक परिचय',
       blocks: [
         {
           paragraphs: [
-            'Koncha Dyo is associated with the traditional Newar community of the area. The surrounding locality was previously known as Sallaghari, the same historic name associated with Siddhi Ganesh Temple.',
-            'The structure resembles a traditional Gagro — a liquid storage vessel. In traditional practice, such vessels were associated with alcohol offerings during religious ceremonies. Amod Rajbhandari was mentioned in the interview notes in connection with the historical background of the area.',
+            'कोंचा द्यो यस क्षेत्रको परम्परागत नेवार समुदायसँग सम्बन्धित धार्मिक तथा सांस्कृतिक सम्पदा हो। यस वरपरको बस्ती पहिले सल्लाघारी नामले चिनिन्थ्यो। सल्लाघारी नाम यस क्षेत्रको पुरानो पहिचानसँग जोडिएको छ।',
+            'यसको बनावट परम्परागत गाग्रो अर्थात् तरल पदार्थ राख्न प्रयोग गरिने भाँडोसँग मिल्दोजुल्दो छ। परम्परागत नेवार धार्मिक अभ्यासमा यस्ता भाँडाहरूमा रक्सी राख्ने र धार्मिक कार्यमा चढाउने चलन रहेको बताइन्छ। स्थानीय विवरणअनुसार यस क्षेत्रको पुरानो इतिहास र विकासक्रम पनि कोंचा द्योको सांस्कृतिक पृष्ठभूमिसँग जोडिएको छ।',
           ],
         },
       ],
@@ -32,16 +35,16 @@ export const konchaDyoNe: Omit<
     {
       id: 'significance',
       title: 'धार्मिक र सांस्कृतिक महत्व',
-      eyebrow: 'समुदायिक विश्वास',
+      eyebrow: 'सामुदायिक विश्वास',
       blocks: [
         {
           paragraphs: [
-            'According to local belief, Koncha Dyo is connected to traditional Newar religious practices. Alcohol offerings and their ritual significance are understood within the framework of these local beliefs, and the site maintains traditional connections with Samay Baje.',
-            "The site is also associated with beliefs about newly married couples visiting for blessings — a practice shared across the neighbourhood's heritage sites.",
+            'स्थानीय मान्यताअनुसार कोंचा द्यो नेवार समुदायका परम्परागत धार्मिक अभ्याससँग सम्बन्धित छ। धार्मिक अनुष्ठानमा रक्सी चढाउने चलन र त्यसको सांस्कृतिक अर्थ स्थानीय धार्मिक विश्वास तथा परम्पराभित्र बुझिने विषय हुन्। यस स्थलको सम्बन्ध समयबजीजस्ता परम्परागत नेवारी परिकार तथा सांस्कृतिक अभ्याससँग पनि रहेको बताइन्छ।',
+            'यस स्थलमा नवविवाहित जोडीहरू सुखी, समृद्ध र सफल दाम्पत्य जीवनको कामना गर्दै दर्शन गर्न आउने परम्परा पनि रहेको स्थानीय समुदायमा विश्वास गरिन्छ। यसले कोंचा द्योलाई समुदायको पारिवारिक तथा सांस्कृतिक जीवनसँग जोडेको छ।',
           ],
         },
       ],
-      note: 'These practices are described as community beliefs from the interview notes, not as verified religious doctrine or documented history.',
+      note: 'यहाँ उल्लेख गरिएका अभ्यास तथा मान्यताहरू अन्तर्वार्ताबाट प्राप्त सामुदायिक विश्वासमा आधारित छन्। तिनलाई प्रमाणित धार्मिक सिद्धान्त वा ऐतिहासिक तथ्यका रूपमा प्रस्तुत गरिएको होइन।',
     },
     {
       id: 'gagro',
@@ -50,7 +53,7 @@ export const konchaDyoNe: Omit<
       blocks: [
         {
           paragraphs: [
-            "The Gagro is a traditional Newar vessel used to store liquids. Koncha Dyo's form echoes this vessel, reflecting how everyday objects of the community became embedded in religious practice. Understanding the Gagro helps explain why the site's shape carries ritual meaning for local residents.",
+            'गाग्रो नेवार समुदायमा परम्परागत रूपमा तरल पदार्थ राख्न प्रयोग गरिने भाँडो हो। कोंचा द्योको बनावट पनि यही गाग्रोको स्वरूपसँग मिल्दोजुल्दो देखिन्छ। यसले दैनिक जीवनमा प्रयोग हुने वस्तुहरू कसरी धार्मिक तथा सांस्कृतिक अभ्याससँग जोडिन सक्छन् भन्ने देखाउँछ। गाग्रोको परम्परागत प्रयोग र महत्व बुझ्दा कोंचा द्योको विशिष्ट स्वरूपको सांस्कृतिक अर्थ बुझ्न थप सहयोग पुग्छ।',
           ],
         },
       ],
@@ -58,15 +61,15 @@ export const konchaDyoNe: Omit<
     {
       id: 'marriage',
       title: 'विवाहसम्बन्धी विश्वासहरू',
-      eyebrow: 'समुदायिक विश्वास',
+      eyebrow: 'सामुदायिक विश्वास',
       blocks: [
         {
           paragraphs: [
-            'Local tradition holds that newly married couples who visit Koncha Dyo receive blessings for a happy, prosperous, and successful married life. This belief connects the site to one of the most important transitions in community life and helps explain its continued role in local custom.',
+            'स्थानीय परम्पराअनुसार नवविवाहित जोडीहरू सुखी, समृद्ध र सफल दाम्पत्य जीवनको आशीर्वाद प्राप्त गर्ने कामनासहित कोंचा द्योको दर्शन गर्न आउने गर्दछन्। विवाहलाई जीवनको महत्वपूर्ण संस्कारका रूपमा लिने समुदायमा यस्तो धार्मिक अभ्यासले विशेष स्थान राख्छ। यस परम्पराले कोंचा द्योलाई स्थानीय समुदायको पारिवारिक तथा सामाजिक जीवनसँग जोडेको छ।',
           ],
         },
       ],
-      note: 'Presented as a community belief documented in the interview notes.',
+      note: 'यो विवरण अन्तर्वार्तामा उल्लेख गरिएको स्थानीय सामुदायिक विश्वासमा आधारित छ।',
     },
     {
       id: 'community',
@@ -75,7 +78,7 @@ export const konchaDyoNe: Omit<
       blocks: [
         {
           paragraphs: [
-            "Like Siddhi Ganesh Temple, Koncha Dyo is sustained through community participation. A Puja Samiti coordinates worship and observances, residents contribute through local donations, and community members take part in the site's upkeep and cultural activities.",
+            'सिद्धि गणेश मन्दिरजस्तै कोंचा द्योको संरक्षण र धार्मिक गतिविधिमा पनि स्थानीय समुदायको सहभागिता महत्वपूर्ण रहेको छ। पूजा समितिले पूजाआजा तथा धार्मिक गतिविधिको व्यवस्थापन र स्थलको संरक्षणमा भूमिका निर्वाह गर्दै आएको छ। स्थानीय बासिन्दाहरूले आर्थिक सहयोग तथा विभिन्न गतिविधिमा सहभागिता जनाएर यसको निरन्तरता कायम राख्न सहयोग पुर्‍याउँदै आएका छन्।',
           ],
         },
       ],
@@ -83,34 +86,41 @@ export const konchaDyoNe: Omit<
     {
       id: 'preservation',
       title: 'सांस्कृतिक संरक्षण',
-      eyebrow: 'अगाडि हेर्दा',
+      eyebrow: 'संरक्षणका चुनौती',
       blocks: [
         {
           paragraphs: [
-            "The interview notes highlight a growing concern: awareness of Koncha Dyo's traditional significance is declining, especially among younger generations and people outside the local community. Documenting sites like this — their forms, rituals, and stories — is an important step toward keeping that knowledge alive.",
+            'अन्तर्वार्तामा कोंचा द्योको परम्परागत महत्वबारे जनचेतना क्रमशः घट्दै गएको विषयमा चिन्ता व्यक्त गरिएको छ। विशेषगरी नयाँ पुस्ता तथा स्थानीय समुदायबाहिरका मानिसहरूलाई यस स्थलको धार्मिक र सांस्कृतिक महत्वबारे पर्याप्त जानकारी नहुन सक्छ। यसको पहिचान र परम्पराबारे जानकारी सीमित समुदायमा मात्र केन्द्रित रहनु पनि संरक्षणको चुनौती हो।',
+            'कोंचा द्योजस्ता सम्पदाको इतिहास, बनावट, धार्मिक अभ्यास र समुदायमा प्रचलित कथाहरूको अभिलेखीकरण गर्नु आवश्यक छ। लिखित विवरण, तस्बिर तथा डिजिटल माध्यमबाट यसको जानकारी सुरक्षित राख्न सके आगामी पुस्ताले पनि यस सम्पदाको सांस्कृतिक महत्व बुझ्न र संरक्षणमा योगदान दिन सक्नेछन्।',
           ],
         },
       ],
     },
   ],
+
   gallery: [
-    { alt: 'कोंचा द्योको संरचना', caption: 'कोंचा द्योको भाँडोजस्तो रूप' },
-    { alt: 'नेवार सम्पदामा प्रयोग हुने परम्परागत गाग्रो भाँडो', caption: 'परम्परागत गाग्रो भाँडो' },
-    { alt: 'Devotees at Koncha Dyo', caption: 'Community visits and worship' },
+    { alt: 'कोंचा द्योको संरचना', caption: 'कोंचा द्योको भाँडोजस्तो स्वरूप' },
     {
-      alt: 'Koncha Dyo within the Ward 16 streetscape',
-      caption: 'Koncha Dyo in its neighbourhood setting',
+      alt: 'नेवार सम्पदामा प्रयोग हुने परम्परागत गाग्रो भाँडो',
+      caption: 'परम्परागत गाग्रो भाँडो',
+    },
+    { alt: 'कोंचा द्योमा दर्शन तथा पूजाआजामा सहभागी भक्तजन', caption: 'स्थानीय समुदायको सहभागिता तथा पूजाआजा' },
+    {
+      alt: 'वडा नं. १६ को सडक तथा बस्तीको परिवेशमा रहेको कोंचा द्यो',
+      caption: 'वरपरको बस्तीको परिवेशमा कोंचा द्यो',
     },
   ],
+
   videos: [
     {
       title: 'कोंचा द्यो — नेवार समुदायको परम्परा',
       description:
-        "A film exploring the site's history, the Gagro tradition, and its place in Ward 16's cultural life. Video coming soon.",
+        'यस भिडियोमा कोंचा द्योको इतिहास, गाग्रो परम्परा र वडा नं. १६ को सांस्कृतिक जीवनमा यसको स्थानबारे जानकारी प्रस्तुत गरिनेछ। भिडियो चाँडै उपलब्ध हुनेछ।',
     },
   ],
+
   location: {
-    landmark: 'सल्लाघारी क्षेत्र, वार्ड १६',
-    note: 'The surrounding area was historically known as Sallaghari.',
+    landmark: 'सल्लाघारी क्षेत्र, वडा नं. १६',
+    note: 'यस क्षेत्रलाई विगतमा सल्लाघारी नामले चिनिने गरेको स्थानीय विवरणमा उल्लेख छ।',
   },
 };
