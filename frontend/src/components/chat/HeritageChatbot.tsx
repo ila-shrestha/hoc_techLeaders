@@ -30,6 +30,13 @@ export function HeritageChatbot() {
     }
   }, [open, t]);
 
+  // Open when triggered from the navbar (single shared instance)
+  useEffect(() => {
+    const onOpen = () => setOpen(true);
+    window.addEventListener("hoc:open-chatbot", onOpen);
+    return () => window.removeEventListener("hoc:open-chatbot", onOpen);
+  }, []);
+
   function answer(question: string): string {
     const q = question.toLowerCase();
 

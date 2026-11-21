@@ -10,7 +10,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@google/genai": "^3.6.1",
     "cors": "^2.8.5",
+    "dotenv": "^18.0.10",
     "express": "^4.21.2"
   },
   "devDependencies": {

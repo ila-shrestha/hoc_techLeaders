@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
-import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { LanguageProvider } from "@/i18n/language";
-import { HeritageChatbot } from "@/components/chat/HeritageChatbot";
-import { GameLauncher } from "@/components/game/GameLauncher";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -34,11 +31,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col">
         <LanguageProvider>
-          <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
-          <GameLauncher />
-          <HeritageChatbot />
         </LanguageProvider>
       </body>
     </html>

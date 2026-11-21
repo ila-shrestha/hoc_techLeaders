@@ -16,6 +16,13 @@ export function GameLauncher() {
     setLoaded(false);
   }, []);
 
+  // Open when triggered from the navbar (single shared instance)
+  useEffect(() => {
+    const onOpen = () => setOpen(true);
+    window.addEventListener("hoc:open-game", onOpen);
+    return () => window.removeEventListener("hoc:open-game", onOpen);
+  }, []);
+
   // Lock body scroll + Escape to close while the console is open
   useEffect(() => {
     if (!open) return;

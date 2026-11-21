@@ -6,8 +6,15 @@ export const en = {
   nav: {
     home: "Home",
     exploreHeritage: "Explore Heritage",
+    about: "About",
     aboutWard16: "About Ward 16",
     chatbot: "Chatbot",
+    game: "Game",
+    discover: "Discover",
+    language: "Language",
+    map: "Map",
+    exploreSites: "Explore Sites",
+    exploreMap: "Explore Map",
     toggleMenu: "Toggle menu",
   },
   chatbot: {
@@ -18,7 +25,7 @@ export const en = {
   },
   hero: {
     badge: "Ward 16 · Cultural Heritage",
-    heading: "Preserving the stories of our heritage",
+    heading: "Stories Carved Into Our Heritage",
     subheading:
       "Discover the temples, traditions, and living culture of Ward 16 — documented by the community, for the community.",
     ctaExplore: "Explore Heritage",
