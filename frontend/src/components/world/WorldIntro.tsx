@@ -366,6 +366,7 @@ export function WorldIntro() {
 
       {/* ============ WELCOME PANEL ============ */}
       {!isExplore && (
+        <>
         <div className="relative z-10 flex min-h-[100svh] flex-col justify-between px-6 py-10 sm:px-12 lg:w-[45%] lg:px-16">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -419,6 +420,18 @@ export function WorldIntro() {
             <span>{heritageSites.length} {lang === "ne" ? "सम्पदा स्थलहरू" : "heritage sites"}</span>
           </div>
         </div>
+
+        {/* Ratna banner — small, bottom-left corner */}
+        <div className="pointer-events-none absolute bottom-20 left-4 z-10 sm:bottom-16 sm:left-12 lg:left-16">
+          <Image
+            src="/images/ratna.png"
+            alt="Ratna"
+            width={1132}
+            height={243}
+            className="h-10 w-auto object-contain opacity-90 sm:h-12"
+          />
+        </div>
+        </>
       )}
 
       {/* ============ EXPLORE HUD ============ */}

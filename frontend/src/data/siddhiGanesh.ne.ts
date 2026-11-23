@@ -1,4 +1,3 @@
-
 import type { HeritageDetail } from './types';
 
 /**

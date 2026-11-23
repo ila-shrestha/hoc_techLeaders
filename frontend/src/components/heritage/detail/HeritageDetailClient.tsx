@@ -68,10 +68,10 @@ export function HeritageDetailClient({
   const localizePhoto = (p?: DetailPhoto): DetailPhoto | undefined =>
     p && useNe
       ? {
-          ...p,
-          alt: p.altNe ?? p.alt,
-          caption: p.captionNe ?? p.caption,
-        }
+        ...p,
+        alt: p.altNe ?? p.alt,
+        caption: p.captionNe ?? p.caption,
+      }
       : p;
   const introPhoto = localizePhoto(photos?.introduction);
 
@@ -88,6 +88,9 @@ export function HeritageDetailClient({
   return (
     <>
       <DetailHero site={site} detail={detail} />
+
+      {/* YouTube video appears before the description */}
+      <VideoSection videos={videos} />
 
       <nav className="border-b border-line bg-mist">
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-4 sm:px-6">
@@ -176,7 +179,7 @@ export function HeritageDetailClient({
       </article>
 
       <Gallery detail={detail} images={gallery} />
-      <VideoSection videos={videos} />
+
       <RelatedSites slugs={detail.relatedSlugs} />
     </>
   );

@@ -34,7 +34,7 @@ export function HeritageCard({ site }: { site: HeritageSite }) {
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <div className="window-frame absolute inset-3 z-10 rounded-sm border-[6px] border-maroon-dark/70" />
-        <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.06]">
+        <div className="relative h-full w-full transition-transform duration-700 group-hover:scale-[1.06]">
           <PlaceholderImage site={{ ...site, name }} />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-maroon-deep/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
